@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: aliceblue;
+}
+
+.image-container {
+    width: 30ch; /* 调整图片容器的宽度 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 8px; /* 圆角边框 */
+    overflow: hidden; /* 隐藏溢出部分 */
+    position: relative; /* 相对定位 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+#clickableImage {
+    display: block;
+    width: 100%; /* 图片宽度占满容器 */
+    height: auto; /* 根据宽度自动调整高度 */
+    transition: transform 0.2s ease; /* 添加过渡效果 */
+}
+
+.image-container:hover #clickableImage {
+    transform: scale(1.1); /* 鼠标悬停时图片放大 1.1 倍 */
+}
+
+.image-details {
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-container:hover .image-details {
+    color: sandybrown; /* 文字颜色变为 */
+}
+
+.image-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+}

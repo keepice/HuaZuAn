@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>酒店详情 - 丽都宾馆</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #4d4d4d;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .hotel-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .hotel-header img {
+      width: 200px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .hotel-name {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hotel-description {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .image-carousel {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .carousel-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 1;
+      font-size: 30px;
+      color: #999;
+    }
+
+    .arrow:hover {
+      color: #333;
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+
+    .hotel-facilities {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .hotel-facilities li {
+      margin-bottom: 10px;
+    }
+
+    #hotel-address {
+      margin-bottom: 20px;
+    }
+
+    #navigate-button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    #navigate-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="hotel-header">
+    <img src="丽都宾馆.png" alt="丽都宾馆">
+    <div>
+      <h1 class="hotel-name">丽都宾馆</h1>
+      <p class="hotel-description">谯城区新华南路135号</p>
+    </div>
+  </div>
+
+  <div class="image-carousel">
+    <button id="prev" class="arrow">❮</button>
+    <div class="carousel-container">
+      <img src="思1.png" alt="酒店">
+      <img src="思2.png" alt="酒店">
+      <img src="思3.png" alt="酒店">
+    </div>
+    <button id="next" class="arrow">❯</button>
+  </div>
+
+  <h2>设施与服务</h2>
+  <ul class="hotel-facilities">
+    <li><i class="fas fa-bed"></i> 舒适的客房</li>
+    <li><i class="fas fa-bath"></i> 私人浴室</li>
+    <li><i class="fas fa-wifi"></i> 免费Wi-Fi</li>
+  </ul>
+  <p>联系电话：0558-5523008</p>
+  <p id="hotel-address">酒店地址：谯城区新华南路135号</p>
+  <button id="navigate-button">前往</button>
+</div>
+
+<script>
+  const carouselContainer = document.querySelector(".carousel-container");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+  let currentImageIndex = 0;
+
+  prevButton.addEventListener("click", () => {
+    if (currentImageIndex > 0) {
+      currentImageIndex--;
+      carouselContainer.style.transform = `translateX(${currentImageIndex * -100}%)`;
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentImageIndex < 2) {
+      currentImageIndex++;
+      carouselContainer.style.transform = `translateX(${currentImageIndex * -100}%)`;
+    }
+  });
+
+  const navigateButton = document.getElementById("navigate-button");
+
+  navigateButton.addEventListener("click", openMap);
+
+  function openMap() {
+    window.open(`https://ditu.amap.com/dir?from%5Bname%5D=%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE&from%5Bid%5D=dirmyloc&from%5Badcode%5D=341600&from%5Bpoitype%5D=&from%5Blnglat%5D=115.787687%2C33.840455&from%5Bmodxy%5D=115.787687%2C33.840455&to%5Bname%5D=%E4%B8%BD%E9%83%BD%E5%AE%BE%E9%A6%86(%E9%97%AE%E7%A4%BC%E5%B7%B7%E5%BA%97)&to%5Blnglat%5D=115.781106%2C33.878509&to%5Bid%5D=B022E01597&to%5Bpoitype%5D=100100&to%5Badcode%5D=341600&to%5Bmodxy%5D=115.781106%2C33.878509&type=car&policy=1=${encodeURIComponent("谯城区新华南路135号")}`);
+  }
+</script>
+</body>
+</html>

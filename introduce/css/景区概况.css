@@ -1,0 +1,276 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin-left: 100px;
+    width: auto;
+    min-height: 100vh;
+    
+    justify-content: space-between;
+    flex-direction: row;
+    /* 修改为水平方向 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    flex: 1;
+    /* 让内容容器根据剩余空间自动调整 */
+    max-width: 800px;
+    /* 设置最大宽度，可根据需要调整 */
+    margin-top: 100px;
+}
+
+.content a {
+    font-size: xx-large;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.slideshow {
+    flex: 1;
+    /* 让幻灯片容器根据剩余空间自动调整 */
+    max-width: 800px;
+    /* 设置最大宽度，可根据需要调整 */
+    margin-top: 30px;
+    height: 400px;
+    /* 设置幻灯片容器的固定高度 */
+    position: relative;
+    /* 保持相对定位 */
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    /* 调整为宽度100%，以适应容器 */
+    height: 100%;
+    /* 保持高度100%，以填满容器 */
+    object-fit: cover;
+    /* 保持原始比例，并填满容器 */
+    position: absolute;
+    /* 保持绝对定位 */
+    top: 0;
+    left: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 30px;
+    order: 1;
+}
+
+.toggler-icon {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s;
+}
+
+.navbar-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.top-content {
+    top: 0;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.top-content-left {
+    flex: 1;
+    /* 让左侧内容占据剩余空间 */
+}
+
+.top-content p {
+    margin: 0;
+}
+
+.navbar {
+    top: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /* 保持logo和汉堡按钮在两端 */
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+    position: fixed;
+    /* LOGO脱离正常文档流 */
+    top: 0;
+    /* LOGO的顶部与导航栏顶部对齐 */
+    bottom: 0;
+    /* LOGO的底部与导航栏底部对齐 */
+    left: 50%;
+    /* 水平居中 */
+    transform: translateX(-50%);
+    /* 调整水平居中 */
+    z-index: 10;
+    /* 确保LOGO在其他元素之上 */
+}
+
+.navbar-logo img {
+    max-height: 80px;
+    /* 确保图片高度不超过其容器 */
+    width: auto;
+    /* 自动调整宽度以保持比例 */
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+
+}
+
+.navbar-left .navbar-item,
+.navbar-right .navbar-item {
+    margin-right: 120px;
+    /* 调整主导航项之间的间距 */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff7709;
+    background-color: #555;
+}
+
+.navbar .submenu {
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 10px;
+    display: none;
+    width: 140px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-item {
+    position: relative;
+}
+
+.navbar .navbar-item:hover .submenu {
+    display: block;
+}
+
+.navbar .submenu a {
+    display: block;
+    color: black;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar .submenu a:hover {
+    background-color: #777;
+}
+
+.responsive-nav {
+    /* 绝对定位，紧贴在.navbar下方 */
+    position: fixed;
+    top: 13%;
+    left: 0;
+    width: 100%;
+    /* 或者指定宽度 */
+    background-color: gray;
+    /* 确保没有额外的间距 */
+    margin: 0;
+    padding-bottom: 10px;
+    /* ... 其他样式 ... */
+}
+
+@media (max-width: 1500px) {
+    .navbar {
+        /* 确保在小屏幕下logo和按钮在同一行 */
+        flex-wrap: nowrap;
+        /* 保持两端对齐 */
+        justify-content: space-between;
+        height: 30px;
+    }
+
+    .navbar-logo {
+        position: relative;
+        top: -20px;
+        left: auto;
+        margin: 10px 0;
+        transform: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        display: none;
+        /* 默认情况下隐藏左右导航 */
+    }
+
+    .navbar-toggle {
+        display: block;
+        /* 显示按钮 */
+        margin: 10px;
+        order: 1;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    /* 当屏幕大于1500px时隐藏按钮 */
+    .navbar-toggler {
+        display: none;
+    }
+
+    .responsive-nav {
+        display: none;
+    }
+}
+
+.active {
+    background-color: #ff7709;
+}
+
+.active_img {
+    width: 15px;
+    height: 15px;
+}

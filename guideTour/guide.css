@@ -1,0 +1,18 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.zoom-area {
+    position: absolute;
+    width: 100%; /* 放大镜区域宽度 */
+    height: 100%; /* 放大镜区域高度 */
+    border: 2px solid #ccc;
+    display: none; /* 初始隐藏 */
+    pointer-events: none; /* 禁止放大镜区域捕捉鼠标事件，以便能够点击到底部图片 */
+    background-size: 100% 100%; /* 背景图片大小 */
+    z-index: 99; /* 确保放大镜在图片上方 */
+}

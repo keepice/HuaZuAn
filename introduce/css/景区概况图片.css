@@ -1,0 +1,159 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.page {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    height: 95vh;
+    /* 使用视口高度单位 */
+    width: 70%;
+    /* 使用百分比单位 */
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 1.0s ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* 更改为cover，以确保图片充满整个区域 */
+    margin-left: 230px;
+    /* 移除margin-left */
+
+}
+
+
+
+
+
+#page1 {
+    background-image: url('../picture/景区概况.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page2 {
+    background-image: url('../picture/景区概况1.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page3 {
+    background-image: url('../picture/景区概况2.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page4 {
+    background-image: url('../picture/景区概况3.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page5 {
+    background-image: url('../picture/景区概况4.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page6 {
+    background-image: url('../picture/景区概况5.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page7 {
+    background-image: url('../picture/景区概况6.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page8 {
+    background-image: url('../picture/景区概况7.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page9 {
+    background-image: url('../picture/景区概况8.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page10 {
+    background-image: url('../picture/景区概况9.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page11 {
+    background-image: url('../picture/景区概况10.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page12 {
+    background-image: url('../picture/景区概况11.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图片充满整个屏幕 */
+    background-position: center;
+    /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 1.0s ease, transform 1.0s ease;
+    transform: translateY(80px);
+}

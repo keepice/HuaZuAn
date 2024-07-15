@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.page {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    height: 95vh; /* 使用视口高度单位 */
+    width: 70%; /* 使用百分比单位 */
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 1.0s ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* 更改为cover，以确保图片充满整个区域 */
+    margin-left: 230px; /* 移除margin-left */
+
+}
+
+
+.page-content {
+    text-align: left;
+    font-family: 华文行楷;
+    font-size: x-large;
+    color: honeydew;
+    line-height: 1.5;
+    margin-top: 50px;
+    margin-left: 5%;
+    padding: 20px; /* 调整文字内容与边框的间距 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0); /* 边框样式，可以根据需要调整 */
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+
+
+#page1 {
+    background-image: url('../picture/华佗中医药博物馆1.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page2 {
+    background-image: url('../picture/华佗中医药博物馆2.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page3 {
+    background-image: url('../picture/华佗中医药博物馆3.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page4 {
+    background-image: url('../picture/华佗中医药博物馆4.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page5 {
+    background-image: url('../picture/华佗中医药博物馆5.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#page6 {
+    background-image: url('../picture/华佗中医药博物馆6.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#page7 {
+    background-image: url('../picture/华佗中医药博物馆7.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#page8 {
+    background-image: url('../picture/华佗中医药博物馆8.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#page9 {
+    background-image: url('../picture/华佗中医药博物馆9.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#page10 {
+    background-image: url('../picture/华佗中医药博物馆10.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#page11 {
+    background-image: url('../picture/华佗中医药博物馆11.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#page12 {
+    background-image: url('../picture/华佗中医药博物馆12.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图片置中 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.page.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 1.0s ease, transform 1.0s ease;
+    transform: translateY(80px);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
