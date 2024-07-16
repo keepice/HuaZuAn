@@ -153,7 +153,7 @@ body {
     left: 0;
     width: 100%;
     /* 或者指定宽度 */
-    background-color: rgb(128, 128, 128);
+    background-color: #808080;
     /* 确保没有额外的间距 */
     margin: 0;
     padding-bottom: 10px;
