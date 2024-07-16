@@ -22,7 +22,6 @@
         .item {
             width: 100%;
             height: 700px;
-            background-color: #808080;
             text-align: center;
         }
 
@@ -55,6 +54,41 @@
         .item3 {
             height: 550px;
             width: 100%;
+        }
+
+        .imgBox {
+            width: 70%;
+            height: 500px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .imgBox img {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+            padding-top: 30px;
+
+        }
+
+        .img1 {
+            display: block;
+        }
+
+        .img2 {
+            display: none;
+        }
+
+        .img3 {
+            display: none;
+        }
+
+        .img4 {
+            display: none;
+        }
+
+        .img5 {
+            display: none;
         }
     </style>
 </head>
@@ -159,10 +193,9 @@
                         </a>
                         <a href="guideTour/guide.html" target="_blank" style="float: left;height: 220px;width: 400px;">
                             <div
-                                style="height: 100%;background-image: url(homePage/picture/photo_img13.jpeg);background-size:cover;">
-                                <p
-                                    style="text-align: center;align-items: center;top: 32%;position: relative;color: white;">
-                                    <b>酒店住宿</b><br><br><br><br>吃住行游，不再发愁
+                                style="height: 100%;background-image: url(homePage/picture/城市之家.png);background-size:cover;">
+                                <p style="text-align: center;align-items: center;top: 32%;position: relative;">
+                                    <b>酒店住宿</b><br><br><br><br><b>吃住行游，不再发愁</b>
                                 </p>
                             </div>
                         </a>
@@ -172,10 +205,54 @@
 
         </div>
         <div class="item">
-            新闻资讯
+            <h2><span>新闻</span><img src="homePage/picture/亳州logo.jpg" alt="" class="item_logo"><span>资讯</span></h2>
+            <p style="font-size: 16px;color: #666666;">快速了解官方新闻动态和旅游活动相关资讯</p>
+            <div class="imgBox">
+                <a target="_blank" href="https://www.dxsyb.com/paper/2024/0713/641260.html?t=2752"
+                    title="“16 岁开始的使命”——访华佗夹脊穴传人魏灵，谈中医药文化传承">
+                    <div class="img-slide img1"
+                        style="height: 100%;background-image: url(/news/img/访华佗夹脊穴传人魏灵.jpg);background-size:cover;border-radius: 15px;">
+                    </div>
+                </a>
+                <a target="_blank" href="http://www.dcdxsw.com/shsj/shsjbg/65877.html"
+                    title="药铃药香相伴，科技创新探索——计信学院赴亳州市华祖庵景区XR创新“项目e站”本科生社会实践团队">
+                    <div class="img-slide img2"
+                        style="height: 100%;background-image: url(/news/img/药铃药香相伴，科技创新探索.jpg);background-size:cover;border-radius: 15px;">
+                    </div>
+                </a>
+                <a target="_blank" href="http://cul.anhuinews.com/xwwh/202309/t20230911_7069164.html"
+                    title="华佗诞辰祭祀典礼：展示非遗技艺弘扬中医药文化">
+                    <div class="img-slide img3"
+                        style="height: 100%;background-image: url(/news/img/华佗诞辰祭祀典礼.jpg);background-size:cover;border-radius: 15px;">
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.sohu.com/a/691626875_121313052" title="来亳州华祖庵，深度了解“神医”华佗">
+                    <div class="img-slide img4"
+                        style="height: 100%;background-image: url(/news/img/亳州华祖庵.jpg);background-size:cover;border-radius: 15px;">
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.sohu.com/a/490866751_121046216"
+                    title="汉文化之旅第三站：华祖庵里的华佗梦，亳州长寿之乡真有那么神？">
+                    <div class="img-slide img5"
+                        style="height: 100%;background-image: url(/news/img/汉文化之旅第三站.jpg);background-size:cover;border-radius: 15px;">
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="item">
-            猜你喜欢
+            <div class="item1">
+                <h2><span>猜你</span><img src="homePage/picture/亳州logo.jpg" alt="" class="item_logo"><span>喜欢</span></h2>
+                <p style="font-size: 16px;color: #666666;">你可能感兴趣的</p>
+            </div>
+            <div class="item2">
+                <a href="/gallery/new_file.html">
+                    <div
+                        style="width: 40%;height: 30vh;;margin-left: 30%;text-align: center;align-items: center;background-color: #2cbce6;border-radius: 15px;">
+                        <p style="color: white;font-size: 22px;top: 42%;position: relative;"><b>精彩图库</b></p>
+                    </div>
+                </a>
+
+            </div>
         </div>
     </div>
     <div class="top-content">
@@ -301,6 +378,19 @@
                 video.pause();
             }
         }
+
+        var index = 0;
+        //效果
+        function ChangeImg() {
+            index++;
+            var a = document.getElementsByClassName("img-slide");
+            if (index >= a.length) index = 0;
+            for (var i = 0; i < a.length; i++) {
+                a[i].style.display = 'none';
+            }
+            a[index].style.display = 'block';
+        }
+        setInterval(ChangeImg, 3000);
     </script>
 </body>
 
