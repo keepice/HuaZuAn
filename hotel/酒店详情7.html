@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店详情 - 蓝天精选酒店</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #4d4d4d;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .hotel-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .hotel-header img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .hotel-name {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hotel-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .image-carousel {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+            font-size: 30px;
+            color: #999;
+        }
+
+        .arrow:hover {
+            color: #333;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+
+        .hotel-facilities {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .hotel-facilities li {
+            margin-bottom: 10px;
+        }
+
+        #hotel-address {
+            margin-bottom: 20px;
+        }
+
+        #navigate-button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #navigate-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hotel-header">
+        <img src="蓝天精选酒店.png" alt="蓝天精选酒店">
+        <div>
+            <h1 class="hotel-name">蓝天精选酒店</h1>
+            <p class="hotel-description">谯城区魏武大道1203号</p>
+        </div>
+    </div>
+
+    <div class="image-carousel">
+        <button id="prev" class="arrow">❮</button>
+        <div class="carousel-container">
+            <img src="蓝1.png" alt="酒店">
+            <img src="蓝2.png" alt="酒店">
+            <img src="蓝3.png" alt="酒店">
+        </div>
+        <button id="next" class="arrow">❯</button>
+    </div>
+
+    <h2>设施与服务</h2>
+    <ul class="hotel-facilities">
+        <li><i class="fas fa-bed"></i> 舒适的客房</li>
+        <li><i class="fas fa-bath"></i> 私人浴室</li>
+        <li><i class="fas fa-wifi"></i> 免费Wi-Fi</li>
+    </ul>
+    <p>联系电话：0558-8110678</p>
+    <p id="hotel-address">酒店地址：谯城区魏武大道1203号</p>
+    <button id="navigate-button">前往</button>
+</div>
+
+<script>
+    const carouselContainer = document.querySelector(".carousel-container");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    let currentImageIndex = 0;
+
+    prevButton.addEventListener("click", () => {
+        if (currentImageIndex > 0) {
+            currentImageIndex--;
+            carouselContainer.style.transform = `translateX(${currentImageIndex * -100}%)`;
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+        if (currentImageIndex < 2) {
+            currentImageIndex++;
+            carouselContainer.style.transform = `translateX(${currentImageIndex * -100}%)`;
+        }
+    });
+
+    const navigateButton = document.getElementById("navigate-button");
+
+    navigateButton.addEventListener("click", openMap);
+
+    function openMap() {
+        window.open(`https://ditu.amap.com/dir?from%5Bid%5D=B022E002D2-from&from%5Bname%5D=%E5%8D%8E%E7%A5%96%E5%BA%B5&from%5Blnglat%5D=115.781981%2C33.877535&from%5Bmodxy%5D=115.780757%2C33.876998&from%5Bpoitype%5D=110000&from%5Badcode%5D=341602&to%5Bid%5D=B022E002AE-to&to%5Bname%5D=%E4%BA%B3%E5%B7%9E%E8%93%9D%E5%A4%A9%E7%B2%BE%E9%80%89%E9%85%92%E5%BA%97&to%5Blnglat%5D=115.787240%2C33.870784&to%5Bmodxy%5D=115.787671%2C33.871139&to%5Bpoitype%5D=100100&to%5Badcode%5D=341602&type=car&policy=1=${encodeURIComponent("谯城区魏武大道1203号")}`);
+    }
+</script>
+</body>
+</html>
