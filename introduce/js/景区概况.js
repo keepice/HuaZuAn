@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const slideshow = document.querySelector('.slideshow');
     const images = slideshow.querySelectorAll('img');
     let currentIndex = 0;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showImage(currentIndex);
 
     // 点击图片切换下一张
-    slideshow.addEventListener('click', function() {
+    slideshow.addEventListener('click', function () {
         clearInterval(intervalId); // 清除自动播放的定时器
         nextImage();
         intervalId = setInterval(nextImage, 3000); // 重新设置自动播放
@@ -39,7 +39,7 @@ const responsiveNav = document.querySelector('.responsive-nav');
 
 // 定义一个函数来检查窗口大小并决定是否显示响应式导航菜单
 function adjustResponsiveMenuVisibility() {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 0) {
         // 如果窗口宽度大于1500px，隐藏响应式导航菜单
         responsiveNav.style.display = 'none';
     } else {
@@ -56,6 +56,26 @@ adjustResponsiveMenuVisibility();
 window.addEventListener('resize', adjustResponsiveMenuVisibility);
 
 // 添加汉堡按钮的点击事件监听器
-hamburgerButton.addEventListener('click', function() {
+hamburgerButton.addEventListener('click', function () {
     responsiveNav.style.display = responsiveNav.style.display === 'block' ? 'none' : 'block';
+});
+document.addEventListener('click', function (event) {
+    // 检查点击事件是否发生在响应式导航菜单或汉堡按钮上
+    const isClickInsideNav = responsiveNav.contains(event.target);
+    const isClickOnHamburger = event.target === hamburgerButton;
+
+    // 如果点击事件发生在响应式导航菜单以外且不是汉堡按钮，则关闭导航栏
+    if (!isClickInsideNav && !isClickOnHamburger) {
+        responsiveNav.style.display = 'none';
+    }
+});
+document.addEventListener('click', function (event) {
+    // 检查点击事件是否发生在响应式导航菜单或汉堡按钮上
+    const isClickInsideNav = responsiveNav.contains(event.target);
+    const isClickOnHamburger = event.target === hamburgerButton;
+
+    // 如果点击事件发生在响应式导航菜单以外且不是汉堡按钮，则关闭导航栏
+    if (!isClickInsideNav && !isClickOnHamburger) {
+        responsiveNav.style.display = 'none';
+    }
 });

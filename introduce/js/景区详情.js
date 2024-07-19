@@ -44,7 +44,7 @@ const responsiveNav = document.querySelector('.responsive-nav');
 
 // 定义一个函数来检查窗口大小并决定是否显示响应式导航菜单
 function adjustResponsiveMenuVisibility() {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 0) {
         // 如果窗口宽度大于1000px，隐藏响应式导航菜单
         responsiveNav.style.display = 'none';
     } else {
@@ -63,4 +63,14 @@ window.addEventListener('resize', adjustResponsiveMenuVisibility);
 // 添加汉堡按钮的点击事件监听器
 hamburgerButton.addEventListener('click', function () {
     responsiveNav.style.display = responsiveNav.style.display === 'block' ? 'none' : 'block';
+});
+document.addEventListener('click', function (event) {
+    // 检查点击事件是否发生在响应式导航菜单或汉堡按钮上
+    const isClickInsideNav = responsiveNav.contains(event.target);
+    const isClickOnHamburger = event.target === hamburgerButton;
+
+    // 如果点击事件发生在响应式导航菜单以外且不是汉堡按钮，则关闭导航栏
+    if (!isClickInsideNav && !isClickOnHamburger) {
+        responsiveNav.style.display = 'none';
+    }
 });
