@@ -1,7 +1,7 @@
 /* 设置整个页面使用 Arial 字体，如果 Arial 不可用则使用系统默认的 sans-serif 字体 */
 body {
     font-family: Arial, sans-serif;
-    display: flex; /* 使用 Flex 布局 */
+    //display: flex; /* 使用 Flex 布局 */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中 */
     height: 100vh; /* 设置页面高度为视口高度 */
@@ -20,14 +20,14 @@ body {
 }
 
 .image-item img {
-    width: 40ch; /* 图片宽度为 200px */
-    height: 20ch; /* 图片高度为 100px，保持宽高比为 2:1 */
+    width: 50ch; /* 图片宽度为 200px */
+    height: 30ch; /* 图片高度为 100px，保持宽高比为 2:1 */
     border-radius: 8px; /* 图片圆角效果 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 图片添加轻微阴影 */
 }
 
 .image-description {
-    max-width: 40ch; /* 设置文字的最大宽度为图片宽度的 40 个字符长度 */
+    max-width: 65ch; /* 设置文字的最大宽度为图片宽度的 40 个字符长度 */
     margin-top: 10px; /* 图片描述文字顶部间距 */
     font-size: 14px; /* 图片描述文字字体大小 */
     color: #333; /* 图片描述文字颜色为深灰色 */
