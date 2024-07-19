@@ -48,7 +48,7 @@ function adjustResponsiveMenuVisibility() {
         // 如果窗口宽度大于1000px，隐藏响应式导航菜单
         responsiveNav.style.display = 'none';
     } else {
-        // 如果窗口宽度小于或等于1500px，允许显示响应式导航菜单
+        // 如果窗口宽度小于或等于1000px，允许显示响应式导航菜单
         // 注意：这里不直接设置display，而是保持它的状态，因为用户可能希望它显示
         // 如果你希望在此条件下总是显示，你可以设置为 'block'
     }

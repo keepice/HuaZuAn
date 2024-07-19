@@ -39,7 +39,7 @@ const responsiveNav = document.querySelector('.responsive-nav');
 
 // 定义一个函数来检查窗口大小并决定是否显示响应式导航菜单
 function adjustResponsiveMenuVisibility() {
-    if (window.innerWidth > 1500) {
+    if (window.innerWidth > 1000) {
         // 如果窗口宽度大于1500px，隐藏响应式导航菜单
         responsiveNav.style.display = 'none';
     } else {

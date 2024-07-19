@@ -160,7 +160,7 @@ body {
     /* ... 其他样式 ... */
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
     .navbar {
         /* 确保在小屏幕下logo和按钮在同一行 */
         flex-wrap: nowrap;
@@ -191,9 +191,9 @@ body {
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1000px) {
 
-    /* 当屏幕大于1500px时隐藏按钮 */
+    /* 当屏幕大于1000px时隐藏按钮 */
     .navbar-toggler {
         display: none;
     }
